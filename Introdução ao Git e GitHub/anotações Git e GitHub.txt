@@ -1,0 +1,93 @@
+Criando arquivo no CMD
+echo [informações dentro do arquivo] > [nome do arquivo].txt
+echo teste > teste.txt
+ls -a : mostra as pastas ocultas
+================================================================================================
+SHA1 encriptação pelo Git
+
+Abra a pasta em que esteja o arquivo txt, clicando com o botão direito > Git Bash Here
+digite o comando: openssl sha1 texto.txt
+================================================================================================
+
+Objetos do Git
+
+Blobs
+echo 'conteudo' | git hash-object -- stdin
+
+======================================================================================================
+
+Chave SSH: estabelece uma conexão segura entre a nuvem GitHub e o seu PC.
+
+Criando chave SSH pelo Git Bash
+
+Abra o Git Bash e digite:
+ssh-keygen -t ed25519 -C [seu e-mail]
+
+
+=======================
+
+Iniciando o Git e criando um commit
+
+Configurar o Git:
+***
+git config --global user.email "deivison.savio@gmail.com" / tecla Enter
+git config --global user.name Deivison / tecla Enter
+
+PARA RECONFIGURAR NA MÁQUINA O GIT
+git config --global --unset user.email
+git config --global --unset user.name
+
+e faça o processo de configuração acima ***
+
+git init: abre o repositório na pasta desejada
+
+git add * : pegará todos os arquivos da pasta e colocará em stage, para commitar
+
+git commit -m "commit inicial"
+
+
+mv lasanha.mf ./receitas [movendo o arquivo lasanha.md para a pasta receitas
+git status: para saber o status da situação
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    lasanha.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        receitas/
+no changes added to commit (use "git add" and/or "git commit -a")
+
+git add lasanha.md receitas/ [adicionando no repositório o arquivo lasanha.md]
+
+git commit -m "cria pasta receitas, move arquivo para receitas"
+[master ee5e221] cria pasta receitas, move arquivo para receitas
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename lasanha.md => receitas/lasanha.md (100%)
+
+git add nomeArquivo
+git add *
+git add .
+
+Arquivos que vão entrar em ação (Stage)
+
+git config --list : pra ver a configuração do git [user e senha]
+
+Linkar o github com o pc
+git remote add origin [url do repository github]
+git remove -v : verificar o link remoto
+git push origin master [vai empurrar o repositório local para o remoto]
+
+=========================================================================================
+
+Sequência para fazer transferir os arquivos para a nuvem do GitHub
+
+git init: abre o repositório na pasta desejada
+
+git add * : pegará todos os arquivos da pasta e colocará em stage, para commitar
+
+git commit -m "commit inicial"
+git add * : pegará todos os arquivos da pasta e colocará em stage, para commitar
+git commit -m "commit inicial"
+git push origin master [vai empurrar o repositório local para o remoto]
