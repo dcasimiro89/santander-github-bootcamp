@@ -90,4 +90,4 @@ git add * : pegará todos os arquivos da pasta e colocará em stage, para commit
 git commit -m "commit inicial"
 git add * : pegará todos os arquivos da pasta e colocará em stage, para commitar
 git commit -m "commit inicial"
-git push origin master [vai empurrar o repositório local para o remoto]
+git push origin master/main [vai empurrar o repositório local para o remoto]
