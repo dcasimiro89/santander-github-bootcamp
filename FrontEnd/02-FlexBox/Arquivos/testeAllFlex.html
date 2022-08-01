@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Flex Testes</title>
+    <style>
+        .container{
+            display: flex;
+            max-width: 400px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .item{
+            background-color: orange;
+            margin: 5px;
+            font-size: 24px;
+            text-align: center;
+            
+        }
+
+        hr{
+            height: 10px;
+            background-color: orange;
+        }
+
+        .fg-0{
+            flex-grow: 0;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+
+        .fg-3{
+            flex-grow: 3;
+        }
+
+        .f-basis{
+            flex-basis: auto;
+        }
+    </style>
+</head>
+<body>
+    <p>flex-grow</p>
+    <div class="container">
+        <div class="item fg-1">AAAAAA</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+        <div class="item fg-1">E</div>
+    </div>
+    <div class="container">
+        <div class="item fg-2">AAAAAA</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+        <div class="item fg-1">E</div>
+    </div>
+    <div class="container">
+        <div class="item fg-3">AAAAAA</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+        <div class="item fg-1">E</div>
+    </div>
+    <hr>
+    <P>flex-grow com flex-basis</P>
+    <div class="container">
+        <div class="item fg-1 f-basis">AAAAA</div>
+        <div class="item fg-1 f-basis">B</div>
+        <div class="item fg-1 f-basis">C</div>
+        <div class="item fg-1 f-basis">D</div>
+        <div class="item fg-1 f-basis">E</div>
+    </div>
+    <div class="container">
+        <div class="item fg-1 f-basis">AAAAAA</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+        <div class="item fg-1">E</div>
+    </div>
+</body>
+</html>
