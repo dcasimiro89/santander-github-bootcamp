@@ -1,0 +1,37 @@
+tsc index.ts [compilar o arquivo]
+Bundler / parcel = pesquisar
+
+console.log('TypeScript');
+
+function soma(a: number, b: number) {
+    return a + b;
+} // tipagem informando que a e b serão números
+soma(5, 10);
+//
+
+interface IAnimal {
+    nome: string;
+    tipo: 'terrestre' | 'aquático';
+    executarRugido(alturaEmDecibeis: number): void;
+}
+
+
+interface IFelino extends IAnimal {
+    visaoNoturna: boolean;
+}
+
+const animal: IAnimal = {
+    nome: 'Elefante',
+    tipo: 'terrestre',
+    executarRugido: (alturaEmDecibeis) => ('${alturaEmDecibeis}dB'),      
+    
+}
+
+const felino: IFelino = {
+    nome: 'Leão',
+    tipo: 'terrestre',
+    visaoNoturna: true,
+    executarRugido(alturaEmDecibeis) {
+        
+    },
+}

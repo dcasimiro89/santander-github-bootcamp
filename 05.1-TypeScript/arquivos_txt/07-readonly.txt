@@ -1,0 +1,32 @@
+index.ts
+
+interface Cachorro {
+    nome: string;
+    idade: number;
+    parqueFavorito?: string;
+}
+
+// const meuCachorro = {
+//     nome: 'Apolo',
+//     idade: 14,
+
+// }
+
+type CachorroSomenteLeitura = {
+    +readonly [K in keyof Cachorro]-? : Cachorro[K]; 
+    // +readonly: adicionando esse readonly dentro dessa classe Cachorro
+    // -? remove os valores adicionais
+}
+
+class MeuCachorro implements Cachorro {
+    idade;
+    nome;
+    parqueFavorito;
+
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+const cao = new MeuCachorro('Apolo', 14);
